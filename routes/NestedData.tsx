@@ -21,10 +21,10 @@ const DataConsumer: React.FC<{
   const { value, loadScript } = loadData(id);
 
   return (
-    <>
+    <React.StrictMode>
       {loadScript}
       {children(value)}
-    </>
+    </React.StrictMode>
   );
 };
 

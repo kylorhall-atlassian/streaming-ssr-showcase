@@ -16,7 +16,7 @@ const Counter = () => {
 
 const BasicApp = () => {
   return (
-    <>
+    <React.StrictMode>
       <Safari />
       <article className="flex w-[100vw]">
         <aside>
@@ -35,7 +35,7 @@ const BasicApp = () => {
           </Suspense>
         </main>
       </article>
-    </>
+    </React.StrictMode>
   );
 };
 

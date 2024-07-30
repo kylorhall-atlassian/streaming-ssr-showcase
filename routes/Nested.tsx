@@ -1,6 +1,8 @@
 import React, { Suspense, useState } from "react";
 import Delayed, { DelayedProvider } from "../components/Delayed";
 import Safari from "../components/Safari";
+// import DelayedTable from "../components/DelayedTable2";
+import DelayedSelect from "../components/DelayedSelect";
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -16,7 +18,7 @@ const Counter = () => {
 
 const NestedApp = () => {
   return (
-    <>
+    <React.StrictMode>
       <Safari />
       <article className="flex w-[100vw]">
         <aside>
@@ -40,19 +42,14 @@ const NestedApp = () => {
                   <Counter />
                 </p>
                 <Suspense fallback={"Nested Loading..."}>
-                  <Delayed ms={1500}>
-                    <p>
-                      3000ms + 1500ms delayed content
-                      <Counter />
-                    </p>
-                  </Delayed>
+                  <DelayedSelect />
                 </Suspense>
               </Delayed>
             </DelayedProvider>
           </Suspense>
         </main>
       </article>
-    </>
+    </React.StrictMode>
   );
 };
 

@@ -27,8 +27,8 @@ const DataConsumer = () => {
 
 const BasicDataApp = () => {
   return (
-    <>
-    <Safari />
+    <React.StrictMode>
+      <Safari />
       <article className="flex w-[100vw]">
         <aside>
           <h1>This is a sidebar</h1>
@@ -47,7 +47,7 @@ const BasicDataApp = () => {
           </CacheProvider>
         </main>
       </article>
-    </>
+    </React.StrictMode>
   );
 };
 

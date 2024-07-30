@@ -27,7 +27,7 @@ const NonStreamedNestedDataApp: React.FC<{ cache: Map<string, DataState> }> = ({
   cache,
 }) => {
   return (
-    <>
+    <React.StrictMode>
       <Safari />
       <article className="flex w-[100vw]">
         <aside>
@@ -70,7 +70,7 @@ const NonStreamedNestedDataApp: React.FC<{ cache: Map<string, DataState> }> = ({
           </CacheProvider>
         </main>
       </article>
-    </>
+    </React.StrictMode>
   );
 };
 
